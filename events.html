@@ -28,14 +28,7 @@
         <p>נהל את האירועים והתמונות שלך</p>
     </div>
 
-    <div class="container">
-        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
-            <h2>העלה תמונה למציאת התמונות שלך</h2>
-            <p>לחץ כאן להעלאת תמונה</p>
-            <p style="color: #999; margin-top: 10px;">המערכת תזהה אותך ותמצא את כל התמונות שלך באירוע</p>
-            <input type="file" id="fileInput" accept="image/*" style="display: none;">
-        </div>
-
+    
         <h2>רשימת האירועים שלי</h2>
 
         <div class="cards-grid">
@@ -44,7 +37,6 @@
                 <p class="card-info">תאריך: 15/01/2026</p>
                 <p class="card-info">מקום: גן אירועים רויאל</p>
                 <p class="card-info">צלם: יוסי כהן</p>
-                <p class="card-info">מספר תמונות שלך: 42</p>
                 <p class="card-info" style="color: green;">סטטוס: פעיל</p>
                 <div class="card-actions">
                     <button class="btn-small">צפה בתמונות</button>
@@ -57,7 +49,6 @@
                 <p class="card-info">תאריך: 08/01/2026</p>
                 <p class="card-info">מקום: אולם שמחה</p>
                 <p class="card-info">צלם: שרה לוי</p>
-                <p class="card-info">מספר תמונות שלך: 28</p>
                 <p class="card-info" style="color: blue;">סטטוס: הסתיים</p>
                 <div class="card-actions">
                     <button class="btn-small">צפה בתמונות</button>
@@ -71,7 +62,6 @@
                 <p class="card-info">תאריך: 02/01/2026</p>
                 <p class="card-info">מקום: גג בקומה 23</p>
                 <p class="card-info">צלם: מיכל רוזן</p>
-                <p class="card-info">מספר תמונות שלך: 35</p>
                 <p class="card-info" style="color: blue;">סטטוס: הסתיים</p>
                 <div class="card-actions">
                     <button class="btn-small">צפה בתמונות</button>
@@ -81,12 +71,11 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('fileInput').addEventListener('change', function(e) {
-            if (e.target.files.length > 0) {
-                alert('התמונה הועלתה! המערכת מעבדת...');
-            }
-        });
-    </script>
+ 
+  <footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 FindMe - כל הזכויות שמורות</p>
+  </div>
+</footer>
 </body>
 </html>
