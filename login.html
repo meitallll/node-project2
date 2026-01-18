@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>התחברות - FindMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>FindMe</h1>
+            <p>מערכת לחיבור צלמים ולקוחות</p>
+            
+            <!-- Login Form -->
+            <div id="loginForm" class="form-section">
+                <h2>התחברות למערכת</h2>
+                <form>
+                    <div class="form-group">
+                        <label>שם משתמש:</label>
+                        <input type="text" id="loginUsername" required>
+                        <span class="error" id="loginUsernameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>סיסמה:</label>
+                        <input type="password" id="loginPassword" required>
+                        <span class="error" id="loginPasswordError"></span>
+                    </div>
+
+                    <button type="submit" class="btn">התחבר</button>
+                </form>
+                
+                <p class="switch-text">
+                    עדיין לא רשום? <a href="#" onclick="showRegister()">הירשם כאן</a>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerForm" class="form-section" style="display: none;">
+                <h2>הרשמה למערכת</h2>
+                <form>
+                    <div class="form-group">
+                        <label>סוג משתמש:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="userType" value="client" checked>
+                                לקוח
+                            </label>
+                            <label>
+                                <input type="radio" name="userType" value="photographer">
+                                צלם
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>שם משתמש:</label>
+                        <input type="text" id="regUsername" required>
+                        <span class="error" id="regUsernameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>סיסמה:</label>
+                        <input type="password" id="regPassword" required>
+                        <span class="error" id="regPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>אימייל:</label>
+                        <input type="email" id="regEmail" required>
+                        <span class="error" id="regEmailError"></span>
+                    </div>
+
+                    <button type="submit" class="btn">הירשם</button>
+                </form>
+                
+                <p class="switch-text">
+                    כבר רשום? <a href="#" onclick="showLogin()">התחבר כאן</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

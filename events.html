@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>האירועים שלי - FindMe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">FindMe</div>
+            <ul class="nav-links">
+                <li><a href="home.html">דף הבית</a></li>
+                <li><a href="photographers.html">צלמים</a></li>
+                <li><a href="events.html">האירועים שלי</a></li>
+            </ul>
+            <div class="user-section">
+                <span>שלום,משתמש</span>
+                <button class="logout-btn">התנתק</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>האירועים שלי</h1>
+        <p>נהל את האירועים והתמונות שלך</p>
+    </div>
+
+    <div class="container">
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+            <h2>העלה תמונה למציאת התמונות שלך</h2>
+            <p>לחץ כאן להעלאת תמונה</p>
+            <p style="color: #999; margin-top: 10px;">המערכת תזהה אותך ותמצא את כל התמונות שלך באירוע</p>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+
+        <h2>רשימת האירועים שלי</h2>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3>חתונת יוסי ושרה</h3>
+                <p class="card-info">תאריך: 15/01/2026</p>
+                <p class="card-info">מקום: גן אירועים רויאל</p>
+                <p class="card-info">צלם: יוסי כהן</p>
+                <p class="card-info">מספר תמונות שלך: 42</p>
+                <p class="card-info" style="color: green;">סטטוס: פעיל</p>
+                <div class="card-actions">
+                    <button class="btn-small">צפה בתמונות</button>
+                    <button class="btn-small btn-secondary">הורד הכל</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>בר מצווה של דני</h3>
+                <p class="card-info">תאריך: 08/01/2026</p>
+                <p class="card-info">מקום: אולם שמחה</p>
+                <p class="card-info">צלם: שרה לוי</p>
+                <p class="card-info">מספר תמונות שלך: 28</p>
+                <p class="card-info" style="color: blue;">סטטוס: הסתיים</p>
+                <div class="card-actions">
+                    <button class="btn-small">צפה בתמונות</button>
+                    <button class="btn-small btn-secondary">הורד הכל</button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <h3>יום הולדת 30</h3>
+                <p class="card-info">תאריך: 02/01/2026</p>
+                <p class="card-info">מקום: גג בקומה 23</p>
+                <p class="card-info">צלם: מיכל רוזן</p>
+                <p class="card-info">מספר תמונות שלך: 35</p>
+                <p class="card-info" style="color: blue;">סטטוס: הסתיים</p>
+                <div class="card-actions">
+                    <button class="btn-small">צפה בתמונות</button>
+                    <button class="btn-small btn-secondary">הורד הכל</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                alert('התמונה הועלתה! המערכת מעבדת...');
+            }
+        });
+    </script>
+</body>
+</html>
